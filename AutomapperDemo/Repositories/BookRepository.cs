@@ -4,13 +4,13 @@ namespace AutomapperDemo.Repositories
 {
     public interface IBookRepository
     {
-        void AddBook(BookDTO book);
+        void AddBook(Book book);
         //List<BookDTO> GetDummyBooks();
     }
     public class BookRepository : IBookRepository
     {
 
-        public void AddBook(BookDTO book)
+        public void AddBook(Book book)
         {
             // logic will go here
         }

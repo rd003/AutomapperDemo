@@ -1,6 +1,5 @@
 ﻿using AutomapperDemo.Models;
 using AutomapperDemo.Repositories;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AutomapperDemo.Controllers
@@ -17,13 +16,10 @@ namespace AutomapperDemo.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddBook(BookDTO book)
+        public IActionResult AddBook(BookDTO bookDto)
         {
-
-            return Ok();
+            return CreatedAtAction(nameof(AddBook), bookDto);
         }
-
-
 
     }
 }
